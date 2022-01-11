@@ -132,7 +132,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "button {\n  background: blue;\n  padding: 1rem 2rem;\n  border-radius: 3px;\n  appearance: none;\n  border: 0;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  font-size: 1.5rem;\n  letter-spacing: 1px;\n  color: white;\n  box-shadow: 0 4px 10px rgba(55, 55, 55, 0.3),\n    0 6px 35px rgba(55, 55, 200, 0.7);\n  cursor: pointer;\n\n  &.make-pink {\n    background: #ff00a2;\n    box-shadow: 0 4px 10px rgba(55, 55, 55, 0.3),\n      0 6px 35px rgb(200 55 150 / 70%);\n  }\n}\n",
+                    "data": "@import 'variables';\n\nbutton {\n  background: $primary-color;\n  padding: 1rem 2rem;\n  border-radius: 3px;\n  appearance: none;\n  border: 0;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  font-size: 1.5rem;\n  letter-spacing: 1px;\n  color: white;\n  box-shadow: 0 4px 10px rgba(55, 55, 55, 0.3),\n    0 6px 35px rgba(55, 55, 200, 0.7);\n  cursor: pointer;\n\n  &.make-pink {\n    background: $secodary-color;\n    box-shadow: 0 4px 10px rgba(55, 55, 55, 0.3),\n      0 6px 35px rgb(200 55 150 / 70%);\n  }\n}\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
@@ -434,13 +434,13 @@
     "modules": [
         {
             "name": "ButtonModule",
-            "id": "module-ButtonModule-c17be8ef228c128dbfe33b43c0ead177ad524fb60df5211194d5e10fbd16228f06a81f67a2b0d09f907c5afcd36cee5d0f4af823821f7a6d8969f9344c489377",
+            "id": "module-ButtonModule-eaa95c9bcd942fb68a35e0870d17dac9c4118e1b6a92115bfedb9b977c929c55543c4dc0d8a342fb04627daa3219b8442d018b47067fc7cc4c914bab5f540edc",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/pattern-lib/src/lib/button/button.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ButtonComponent } from \"./button.component\";\n\n\n\n@NgModule({\n  declarations: [ButtonComponent],\n  imports: [\n    CommonModule\n  ]\n})\nexport class ButtonModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ButtonComponent } from \"./button.component\";\n\n\n\n@NgModule({\n  declarations: [ButtonComponent],\n  imports: [\n    CommonModule\n  ],\n  exports: [ButtonComponent]\n})\nexport class ButtonModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -460,7 +460,11 @@
                 },
                 {
                     "type": "exports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "ButtonComponent"
+                        }
+                    ]
                 },
                 {
                     "type": "bootstrap",
@@ -474,13 +478,13 @@
         },
         {
             "name": "PatternLibModule",
-            "id": "module-PatternLibModule-45308edf8fdc8046d3c790e277c27e675898f9c6f69f1bc06f957f541e8c1328253fbf5d68b867024991b2e15d608e3248f97eb541802d9b4c95883619866400",
+            "id": "module-PatternLibModule-438cd40e761e814d0e505f905a22bbaf475775322d9c86f4d9a100c603c5ce232b46ab90453de46888bf92ecab10970108623d22aca9e8d5d60343c9368e601c",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/pattern-lib/src/lib/pattern-lib.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { PatternLibComponent } from './pattern-lib.component';\nimport { ButtonModule } from \"./button/button.module\";\n\n@NgModule({\n  declarations: [PatternLibComponent],\n  imports: [CommonModule, ButtonModule],\n  exports: [PatternLibComponent, ButtonModule],\n})\nexport class PatternLibModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ButtonModule } from \"./button/button.module\";\n\n@NgModule({\n  declarations: [],\n  imports: [CommonModule, ButtonModule],\n  exports: [ButtonModule],\n})\nexport class PatternLibModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -488,11 +492,7 @@
                 },
                 {
                     "type": "declarations",
-                    "elements": [
-                        {
-                            "name": "PatternLibComponent"
-                        }
-                    ]
+                    "elements": []
                 },
                 {
                     "type": "imports",
@@ -507,9 +507,6 @@
                     "elements": [
                         {
                             "name": "ButtonModule"
-                        },
-                        {
-                            "name": "PatternLibComponent"
                         }
                     ]
                 },
