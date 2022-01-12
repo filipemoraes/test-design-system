@@ -15,11 +15,17 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "paths": {
-      "pattern-lib": ["dist/pattern-lib/pattern-lib", "dist/pattern-lib"]
+      "pattern-lib": [
+        "dist/pattern-lib/pattern-lib",
+        "dist/pattern-lib"
+      ]
     },
     "target": "es2017",
     "module": "es2020",
-    "lib": ["es2018", "dom"]
+    "lib": [
+      "es2018",
+      "dom"
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

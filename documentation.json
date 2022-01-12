@@ -132,7 +132,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import 'variables';\n\nbutton {\n  background: $primary-color;\n  padding: 1rem 2rem;\n  border-radius: 3px;\n  appearance: none;\n  border: 0;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  font-size: 1.5rem;\n  letter-spacing: 1px;\n  color: white;\n  box-shadow: 0 4px 10px rgba(55, 55, 55, 0.3),\n    0 6px 35px rgba(55, 55, 200, 0.7);\n  cursor: pointer;\n\n  &.make-pink {\n    background: $secodary-color;\n    box-shadow: 0 4px 10px rgba(55, 55, 55, 0.3),\n      0 6px 35px rgb(200 55 150 / 70%);\n  }\n}\n",
+                    "data": "@import 'scss/variables';\n\nbutton {\n  background: $primary-color;\n  padding: 1rem 2rem;\n  border-radius: 3px;\n  appearance: none;\n  border: 0;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  font-size: 1.5rem;\n  letter-spacing: 1px;\n  color: white;\n  box-shadow: 0 4px 10px rgba(55, 55, 55, 0.3),\n    0 6px 35px rgba(55, 55, 200, 0.7);\n  cursor: pointer;\n\n  &.make-pink {\n    background: $secodary-color;\n    box-shadow: 0 4px 10px rgba(55, 55, 55, 0.3),\n      0 6px 35px rgb(200 55 150 / 70%);\n  }\n}\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
@@ -434,13 +434,13 @@
     "modules": [
         {
             "name": "ButtonModule",
-            "id": "module-ButtonModule-eaa95c9bcd942fb68a35e0870d17dac9c4118e1b6a92115bfedb9b977c929c55543c4dc0d8a342fb04627daa3219b8442d018b47067fc7cc4c914bab5f540edc",
+            "id": "module-ButtonModule-9b4f77ccf43d311c2d7a8c5f1627f2d4c377d564fe9faea75882901c45438cdf7ca63f05f9af96c85b1d4ab99ab8ac473fe158fd3cbf4b8eb29e90e5ccdb9423",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/pattern-lib/src/lib/button/button.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ButtonComponent } from \"./button.component\";\n\n\n\n@NgModule({\n  declarations: [ButtonComponent],\n  imports: [\n    CommonModule\n  ],\n  exports: [ButtonComponent]\n})\nexport class ButtonModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ButtonComponent } from \"./button.component\";\n\n@NgModule({\n  declarations: [ButtonComponent],\n  imports: [\n    CommonModule\n  ],\n  exports: [ButtonComponent]\n})\nexport class ButtonModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -606,21 +606,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/pattern-lib/src/lib/button/button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\ncomponent: ButtonComponent,\nprops: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/pattern-lib/src/lib/task/task.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "args => ({\n  props: {\n    ...args,\n    onPinTask: actionsData.onPinTask,\n    onArchiveTask: actionsData.onArchiveTask,\n  },\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/pattern-lib/src/lib/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\ncomponent: ButtonComponent,\nprops: args,\n})"
             }
         ],
         "functions": [],
