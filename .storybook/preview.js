@@ -1,6 +1,10 @@
 import { setCompodocJson } from "@storybook/addon-docs/angular";
 import docJson from "../documentation.json";
-import "!style-loader!css-loader!sass-loader!../projects/pattern-lib/src/scss/index.scss";
+import styles from "!sass-loader!../projects/pattern-lib/src/scss/index.scss";
+
+const storybookStyles = document.createElement("style");
+storybookStyles.innerHTML = styles;
+document.body.appendChild(storybookStyles);
 
 setCompodocJson(docJson);
 
