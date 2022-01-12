@@ -73,7 +73,7 @@
     "components": [
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-522520439bc2e1bfab4cfd7df1bd0387493d78480da85993f0ce2a7a7e80dc972605fba6503247545d21d2f882a0e0f53fd1fb43ef7d4af027b4ec373b6314d4",
+            "id": "component-ButtonComponent-3dc17518fde63fb54d91ca43dca1524c5a83c5c856a63f1a530fb243624e3ed8f99e7f3259e9646d4bd4f4ae3785320563fc77a9ca697d4c2f04959ca618b36e",
             "file": "projects/pattern-lib/src/lib/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -81,9 +81,7 @@
             "outputs": [],
             "providers": [],
             "selector": "pl-button",
-            "styleUrls": [
-                "./button.component.scss"
-            ],
+            "styleUrls": [],
             "styles": [],
             "templateUrl": [
                 "./button.component.html"
@@ -94,7 +92,7 @@
                     "name": "label",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 9,
+                    "line": 8,
                     "type": "string | null",
                     "decorators": []
                 },
@@ -102,7 +100,7 @@
                     "name": "pink",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 10,
+                    "line": 9,
                     "type": "boolean",
                     "decorators": []
                 }
@@ -116,7 +114,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 14,
+                    "line": 13,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -128,14 +126,9 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\n\n@Component({\n  selector: 'pl-button', // pl is our prefix\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n})\nexport class ButtonComponent implements OnInit {\n  @Input('label') label: string | null;\n  @Input('pink') pink: boolean;\n\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\n\n@Component({\n  selector: 'pl-button',\n  templateUrl: './button.component.html'\n})\nexport class ButtonComponent implements OnInit {\n  @Input('label') label: string | null;\n  @Input('pink') pink: boolean;\n\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
             "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "@import 'scss/variables';\n\nbutton {\n  background: $primary-color;\n  padding: 1rem 2rem;\n  border-radius: 3px;\n  appearance: none;\n  border: 0;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  font-size: 1.5rem;\n  letter-spacing: 1px;\n  color: white;\n  box-shadow: 0 4px 10px rgba(55, 55, 55, 0.3),\n    0 6px 35px rgba(55, 55, 200, 0.7);\n  cursor: pointer;\n\n  &.make-pink {\n    background: $secodary-color;\n    box-shadow: 0 4px 10px rgba(55, 55, 55, 0.3),\n      0 6px 35px rgb(200 55 150 / 70%);\n  }\n}\n",
-                    "styleUrl": "./button.component.scss"
-                }
-            ],
+            "styleUrlsData": "",
             "stylesData": "",
             "constructorObj": {
                 "name": "constructor",
@@ -143,7 +136,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 10
+                "line": 9
             },
             "implements": [
                 "OnInit"
@@ -606,21 +599,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/pattern-lib/src/lib/task/task.stories.ts",
+                "file": "projects/pattern-lib/src/lib/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "args => ({\n  props: {\n    ...args,\n    onPinTask: actionsData.onPinTask,\n    onArchiveTask: actionsData.onArchiveTask,\n  },\n})"
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/pattern-lib/src/lib/button/button.stories.ts",
+                "file": "projects/pattern-lib/src/lib/task/task.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\ncomponent: ButtonComponent,\nprops: args,\n})"
+                "type": "Story",
+                "defaultValue": "args => ({\n  props: {\n    ...args,\n    onPinTask: actionsData.onPinTask,\n    onArchiveTask: actionsData.onArchiveTask,\n  },\n})"
             }
         ],
         "functions": [],
@@ -729,7 +722,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<ButtonComponent>",
-                    "defaultValue": "(args: ButtonComponent) => ({\ncomponent: ButtonComponent,\nprops: args,\n})"
+                    "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
                 }
             ]
         },
