@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
-import { Task } from '../models/task.model';
+import { Task } from './models/task.model';
 
 @Component({
   selector: 'app-task-list',
@@ -14,12 +14,12 @@ export class TaskListComponent {
   @Input() loading = false;
 
   /** Event to change the task to pinned */
-    // tslint:disable-next-line: no-output-on-prefix
+  // tslint:disable-next-line: no-output-on-prefix
   @Output()
   onPinTask = new EventEmitter<Event>();
 
   /** Event to change the task to archived */
-    // tslint:disable-next-line: no-output-on-prefix
+  // tslint:disable-next-line: no-output-on-prefix
   @Output()
   onArchiveTask = new EventEmitter<Event>();
 }
